@@ -1,14 +1,29 @@
-import React from "react";
+import React from 'react';
+import logo from './logo.svg';
+import './App.css';
 
-import ComingSoon from "react-coming-soon";
-
-export default function App() {
+function App() {
 	return (
-		<ComingSoon
-			image="https://react-coming-soon.maksv.me/default-image.jpeg"
-			bgColor="#fff"
-			textColor="#000"
-			illustration="development"
-		/>
+		<div className="App">
+			<header className="App-header">
+				<img src={logo} className="App-logo" alt="logo" />
+				<p>
+					Edit <code>src/App.js</code> and save to reload.
+				</p>
+				<p>
+					Hello world! This is my website
+				</p>
+				<a
+					className="App-link"
+					href="https://reactjs.org"
+					target="_blank"
+					rel="noopener noreferrer"
+				>
+					Learn React
+				</a>
+			</header>
+		</div>
 	);
 }
+
+export default App;
