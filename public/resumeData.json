@@ -1,23 +1,22 @@
 {
   "main": {
     "name":"Dimitris Selalmazidis",
-    "occupation":"Software Security Engineer",
-    "description":" currently employed by ",
-    "employer":"Shop Your Own Mortgage",
-    "jobDescription":"full stack software engineer across the range of our products, as well being our lead security specialist",
-    "image":"profile_pic.jpg",
+    "occupation":"Full Stack Software Engineer",
+    "employer":"American Express",
+    "jobDescription":"Full Stack Engineer",
+    "image":"profilepic.jpeg",
     "bio":"I am an athlete at heart, with an entrepreneurial spirit, a knack for online security, and a passion for coding. Having returned from my year of traveling, I pursued my first development job to kick off my career. I was hired as a full stack developer by Shop Your Own Mortgage, where I still work today. Since beginning my career there, I have been given the opportunity to shift into cybersecurity for the company. I am currently working towards my Certified Ethical Hacker certification while working as a full stack developer and lead security specialist.",
     "contactmessage":"Have a project for me? Think I'd be a good fit for your team? I'd love to hear from you, give me a shout by email or by using the form below if you'd like to get in contact with me.",
     "email": "d.selal@hotmail.com",
-    "phone": "(250) 793-0920",
+    "phone": "+44 (0)785-868-8532",
     "address":{
-      "street":"Pacific Avenue",
-      "city":"Victoria",
-      "state":"British Columbia",
-      "zip": "V9A 1L6"
+      "street":"Robert Street",
+      "city":"Brighton",
+      "state":"East Sussex",
+      "zip": "BN1 4AY"
     },
     "website": "http://www.dimitris-selalmazidis.com",
-    "resumedownload":"https://drive.google.com/uc?export=pdf&id=1JZ_9_koC-W0jVg39lGh8Jd0hwJzv8kqn",
+    "resumedownload":"https://drive.google.com/open?id=1hlMroLqSbSCHt4Vy-ZPEDCxsaYi8gwLl",
 	"social":[
 	  {
 		"name":"facebook",
@@ -31,12 +30,12 @@
 	  },
 	  {
 		"name":"google-plus",
-		"url":"http://googleplus.com/tbakerx",
-		"className":"fa fa-google-plus"
+		"url":"https://stackoverflow.com/users/8908151/dimitris-selalmazidis?tab=profile",
+		"className":"fa fa-stack-overflow"
 	  },
 	  {
 		"name":"linkedin",
-		"url":"https://www.linkedin.com/in/tim-baker-8420009a/",
+		"url":"https://www.linkedin.com/in/dimitris-selalmazidis/",
 		"className":"fa fa-linkedin"
 	  },
 	  {
@@ -48,11 +47,6 @@
 		"name":"github",
 		"url":"https://github.com/theMitsosS",
 		"className":"fa fa-github"
-	  },
-	  {
-		"name":"skype",
-		"url":"http://skype.com",
-		"className":"fa fa-skype"
 	  }
 	]
   },
@@ -148,7 +142,7 @@
         "title":"Fury Fighting Gear",
         "category":"(offline now) A fighting gear company I started",
         "image":"fury-fighting-gear.jpg",
-        "url":"http://www.timbakerdev.com"
+        "url":"http://www.dimitris-selalmazidis.com"
       },
       {
         "title":"Original Thai Food",
