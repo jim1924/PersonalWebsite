@@ -1,5 +1,4 @@
-import React, { Component } from 'react';
-import ReactGA from 'react-ga';
+import React, {Component} from 'react';
 import $ from 'jquery';
 import './App.css';
 import Header from './Components/Header';
@@ -11,39 +10,35 @@ import Testimonials from './Components/Testimonials';
 import Portfolio from './Components/Portfolio';
 
 class App extends Component {
-
-  constructor(props){
+  constructor(props) {
     super(props);
     this.state = {
       foo: 'bar',
-      resumeData: {}
+      resumeData: {},
     };
-
-    ReactGA.initialize('UA-110570651-1');
-    ReactGA.pageview(window.location.pathname);
-
   }
 
-  getResumeData(){
+  getResumeData() {
     $.ajax({
-      url:'/resumeData.json',
-      dataType:'json',
+      url: '/resumeData.json',
+      dataType: 'json',
       cache: false,
-      success: function(data){
+      success: function(data) {
         this.setState({resumeData: data});
       }.bind(this),
-      error: function(xhr, status, err){
+      error: function(xhr, status, err) {
         console.log(err);
         alert(err);
-      }
+      },
     });
   }
 
-  componentDidMount(){
+  componentDidMount() {
     this.getResumeData();
   }
 
   render() {
+  	console.log(this.state);
     return (
       <div className="App">
         <Header data={this.state.resumeData.main}/>
