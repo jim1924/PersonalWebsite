@@ -1,4 +1,6 @@
 import React, {Component} from 'react';
+import PropTypes from 'prop-types';
+
 
 class Header extends Component {
   render() {
@@ -7,10 +9,10 @@ class Header extends Component {
     const jobDescription = this.props.data.jobDescription;
     const employer = this.props.data.employer;
     const city = this.props.data.address.city;
-    const networks = this.props.data.social.map(function(network) {
+    const networks = this.props.data.social.map((network)=> {
       return (
         <li key={network.name}>
-          <a href={network.url}>
+          <a href={network.url} style={{display: 'table-cell'}} target="_blank" rel="noopener noreferrer">
             <i className={network.className} />
           </a>
         </li>
@@ -68,7 +70,7 @@ class Header extends Component {
               I'm a <span>{city}</span> based <span>{occupation}</span>, with a
               variety of knowledge in different front and back end languages,
               responsive frameworks, databases and best code practises. My
-              objective is to simply become the best software engineer I can be
+              objective is to simply become the best engineer I can be
               and to contribute to the industry of technology. I am currently
               employed by
               <span>{employer}</span> as a<span> {jobDescription}</span>.
@@ -87,5 +89,9 @@ class Header extends Component {
     );
   }
 }
+
+Header.propTypes={
+  data: PropTypes.object.isRequired,
+};
 
 export default Header;
