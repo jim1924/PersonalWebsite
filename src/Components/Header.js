@@ -2,22 +2,20 @@ import React, {Component} from 'react';
 
 class Header extends Component {
   render() {
-    if (this.props.data) {
-      var name = this.props.data.name;
-      var occupation = this.props.data.occupation;
-      var jobDescription = this.props.data.jobDescription;
-      var employer = this.props.data.employer;
-      var city = this.props.data.address.city;
-      var networks = this.props.data.social.map(function(network) {
-        return (
-          <li key={network.name}>
-            <a href={network.url}>
-              <i className={network.className}></i>
-            </a>
-          </li>
-        );
-      });
-    }
+    const name = this.props.data.name;
+    const occupation = this.props.data.occupation;
+    const jobDescription = this.props.data.jobDescription;
+    const employer = this.props.data.employer;
+    const city = this.props.data.address.city;
+    const networks = this.props.data.social.map(function(network) {
+      return (
+        <li key={network.name}>
+          <a href={network.url}>
+            <i className={network.className} />
+          </a>
+        </li>
+      );
+    });
 
     return (
       <header id="home">
@@ -71,9 +69,9 @@ class Header extends Component {
               variety of knowledge in different front and back end languages,
               responsive frameworks, databases and best code practises. My
               objective is to simply become the best software engineer I can be
-              and to contribute to the technology industry. I am currently
+              and to contribute to the industry of technology. I am currently
               employed by
-              <span>{employer}</span> as a<span>  {jobDescription}</span>.
+              <span>{employer}</span> as a<span> {jobDescription}</span>.
             </h3>
             <hr />
             <ul className="social">{networks}</ul>

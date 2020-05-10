@@ -8,43 +8,30 @@ import Resume from './Components/Resume';
 import Contact from './Components/Contact';
 import Testimonials from './Components/Testimonials';
 import Portfolio from './Components/Portfolio';
+import data from './data/resumeData.json';
+import Loader from './Components/Loader';
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      resumeData: {},
+      resumeData: data,
+      loading: true,
     };
   }
 
-  getResumeData() {
-    const load = document.getElementById('siteLoading');
-    $.ajax({
-      url: '/resumeData.json',
-      dataType: 'json',
-      cache: false,
-      success: (data)=> {
-        this.setState({resumeData: data});
-        setTimeout(()=>{
-          load.outerHTML='';
-        }, 500);
-      },
-      error: (xhr, status, err)=> {
-        console.log(err);
-        alert(err);
-      },
-    });
-  }
 
   componentDidMount() {
-    this.getResumeData();
+    setTimeout(() => {
+      this.setState({loading: false});
+    }, 1000);
   }
-
 
   render() {
     return (
       <div className="App">
-        <Header data={this.state.resumeData.main}/>
+        {this.state.loading && <Loader />}
+        <Header data={this.state.resumeData.main} />
         {/* <About data={this.state.resumeData.main}/>*/}
         {/* <Resume data={this.state.resumeData.resume}/>*/}
         {/* <Portfolio data={this.state.resumeData.portfolio}/>*/}

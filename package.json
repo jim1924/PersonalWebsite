@@ -1,5 +1,6 @@
 {
-  "name": "dimitris-selalmazidis-personal-web",
+  "name": "mywebsite",
+  "homepage": "http://themitsoss.github.io",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -14,12 +15,16 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "echo 'dimitris-selalmazidis.com' > ./build/CNAME && gh-pages -d build"
   },
   "devDependencies": {
     "eslint": "^7.0.0",
     "eslint-config-google": "^0.14.0",
     "eslint-loader": "^4.0.2",
-    "eslint-plugin-react": "^7.19.0"
+    "eslint-plugin-react": "^7.19.0",
+    "file-loader": "^6.0.0",
+    "gh-pages": "^2.2.0"
   }
 }
