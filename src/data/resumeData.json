@@ -5,8 +5,8 @@
     "employer":" American Express",
     "jobDescription":"Full Stack Engineer",
     "image":"profilepic.jpeg",
-    "bio":"I am an athlete at heart, with an entrepreneurial spirit, a knack for online security, and a passion for coding. Having returned from my year of traveling, I pursued my first development job to kick off my career. I was hired as a full stack developer by Shop Your Own Mortgage, where I still work today. Since beginning my career there, I have been given the opportunity to shift into cybersecurity for the company. I am currently working towards my Certified Ethical Hacker certification while working as a full stack developer and lead security specialist.",
-    "contactmessage":"Have a project for me? Think I'd be a good fit for your team? I'd love to hear from you, give me a shout by email or by using the form below if you'd like to get in contact with me.",
+	"bio": "Highly motivated and enthusiastic software engineer with strong academic background and commercial experience leveraging technical knowledge, project management skills and passion for technology. Skilled communicator able to navigate fast-paced team environments, engage clients, and motivate team success. Analytical and organized as well as highly adaptable, proactive, and innovative in approach to designing solutions to complex problems.",
+    "contactMessage":"Have a project for me? Think I'd be a good fit for your team? I'd love to hear from you, give me a shout by email or by using the form below if you'd like to get in contact with me.",
     "email": "d.selal@hotmail.com",
     "phone": "+44 (0)785-868-8532",
     "address":{
@@ -16,22 +16,12 @@
       "zip": "BN1 4AY"
     },
     "website": "http://www.dimitris-selalmazidis.com",
-    "resumedownload":"https://drive.google.com/open?id=1hlMroLqSbSCHt4Vy-ZPEDCxsaYi8gwLl",
+    "resumedownload":"https://drive.google.com/uc?id=1hlMroLqSbSCHt4Vy-ZPEDCxsaYi8gwLl&export=download",
 	"social":[
 	  {
-		"name":"facebook",
-		"url":"https://www.facebook.com/jim1924",
-		"className":"fa fa-facebook"
-	  },
-	  {
-		"name":"twitter",
-		"url":"https://twitter.com/theMitsosS",
-		"className":"fa fa-twitter"
-	  },
-	  {
-		"name":"google-plus",
-		"url":"https://stackoverflow.com/users/8908151/dimitris-selalmazidis?tab=profile",
-		"className":"fa fa-stack-overflow"
+		"name":"github",
+		"url":"https://github.com/theMitsosS",
+		"className":"fa fa-github"
 	  },
 	  {
 		"name":"linkedin",
@@ -39,14 +29,24 @@
 		"className":"fa fa-linkedin"
 	  },
 	  {
+		"name":"stack-overflow",
+		"url":"https://stackoverflow.com/users/8908151/dimitris-selalmazidis?tab=profile",
+		"className":"fa fa-stack-overflow"
+	  },
+	  {
+		"name":"facebook",
+		"url":"https://www.facebook.com/jim1924",
+		"className":"fa fa-facebook"
+	  },
+	  {
 		"name":"instagram",
 		"url":"https://www.instagram.com/themitsoss",
 		"className":"fa fa-instagram"
 	  },
 	  {
-		"name":"github",
-		"url":"https://github.com/theMitsosS",
-		"className":"fa fa-github"
+		"name":"twitter",
+		"url":"https://twitter.com/theMitsosS",
+		"className":"fa fa-twitter"
 	  }
 	]
   },

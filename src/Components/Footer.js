@@ -1,31 +1,19 @@
 import React, {Component} from 'react';
+import Networks from './Networks';
 
 class Footer extends Component {
   render() {
-    if (this.props.data) {
-      var networks = this.props.data.social.map(function(network) {
-        return (
-          <li key={network.name}>
-            <a href={network.url}>
-              <i className={network.className}></i>
-            </a>
-          </li>
-        );
-      });
-    }
-
     return (
       <footer>
         <div className="row">
           <div className="twelve columns">
-            <ul className="social-links">{networks}</ul>
-
+            <ul className="social-links"><Networks social={this.props.data.social}/></ul>
             <ul className="copyright">
               <li>
-                &copy; Copyright 2017{' '}
+                &copy; Copyright {new Date().getFullYear() }{' '}
                 <a
                   title="Dimitris Selalmazidis"
-                  href="http://www.timbakerdev.com/"
+                  href="http://www.dimitris-selalmazidis.com/"
                 >
                   Dimitris Selalmazidis
                 </a>
@@ -40,7 +28,7 @@ class Footer extends Component {
           </div>
           <div id="go-top">
             <a className="smoothscroll" title="Back to Top" href="#home">
-              <i className="icon-up-open"></i>
+              <i className="icon-up-open"/>
             </a>
           </div>
         </div>

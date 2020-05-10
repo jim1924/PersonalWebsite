@@ -2,15 +2,8 @@ import React, {Component} from 'react';
 
 class Contact extends Component {
   render() {
-    if (this.props.data) {
-      var name = this.props.data.name;
-      var city = this.props.data.address.city;
-      var state = this.props.data.address.state;
-      var zip = this.props.data.address.zip;
-      var phone = this.props.data.phone;
-      var email = this.props.data.email;
-      var message = this.props.data.contactmessage;
-    }
+    const {city, state, zip} = this.props.data.address;
+    const {name, phone, email, contactMessage} = this.props.data;
 
     return (
       <section id="contact">
@@ -21,7 +14,7 @@ class Contact extends Component {
             </h1>
           </div>
           <div className="ten columns">
-            <p className="lead">{message}</p>
+            <p className="lead">{contactMessage}</p>
             <br />
             <p className="lead warning">
               Warning: Contact form not yet configured, please contact me via
@@ -96,7 +89,8 @@ class Contact extends Component {
 
             <div id="message-warning"> Error boy</div>
             <div id="message-success">
-              <i className="fa fa-check"/>Your message was sent, thank you!
+              <i className="fa fa-check" />
+              Your message was sent, thank you!
               <br />
             </div>
           </div>

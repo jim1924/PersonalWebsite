@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
+import Networks from './Networks';
 
 
 class Header extends Component {
@@ -9,15 +10,7 @@ class Header extends Component {
     const jobDescription = this.props.data.jobDescription;
     const employer = this.props.data.employer;
     const city = this.props.data.address.city;
-    const networks = this.props.data.social.map((network)=> {
-      return (
-        <li key={network.name}>
-          <a href={network.url} style={{display: 'table-cell'}} target="_blank" rel="noopener noreferrer">
-            <i className={network.className} />
-          </a>
-        </li>
-      );
-    });
+    const networks = <Networks social={this.props.data.social}/>;
 
     return (
       <header id="home">
