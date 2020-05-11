@@ -751,9 +751,8 @@ call-to-action .button {
    margin-right: 10px;
 }
 #image-loader {
-   display: none;
    position: relative;
-   left: 18px;
+   left: 43%;
    top: 17px;
 }
 
