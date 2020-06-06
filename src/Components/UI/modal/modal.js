@@ -1,20 +1,28 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import classes from './modal.module.css';
 
-
-const modal = ({handleClose, show, children}) => {
-  const showHideClassName = show ? 'modal display-block' : 'modal display-none';
+const Modal = ({handleClose, show, children}) => {
+  const modalDivClassName=[classes.modal];
   console.log(classes);
+  console.log(show);
+  const skata=show?classes.displayBlock:classes.displayNone;
+  console.log(skata);
+  modalDivClassName.push(skata);
+
+  useEffect(() => {
+    show? document.body.style.overflow = 'hidden':
+		document.body.style.overflow = 'unset';
+  }, [show]);
+
 
   return (
-    <div className={showHideClassName}>
-      <section className="modal-main">
+    <div className={modalDivClassName.join(' ')}>
+      <section className={classes.modalMain}>
         {children}
-        <button onClick={handleClose}>close</button>
+        <button className={classes.close} onClick={handleClose}>close</button>
       </section>
     </div>
   );
 };
 
-export default modal;
-
+export default Modal;

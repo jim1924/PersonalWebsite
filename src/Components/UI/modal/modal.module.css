@@ -7,8 +7,7 @@
 	background: rgba(0, 0, 0, 0.7);
 }
 
-.modal-main {
-	color: #0D0D0D; /*color of text*/
+.modalMain {
 	position:fixed;
 	background: #eeeeee;
 	width: 30%;
@@ -16,26 +15,37 @@
 	top:50%;
 	left:50%;
 	transform: translate(-50%,-50%);
+
+	color: #0D0D0D; /*color of text*/
 	border: 5px solid #D72828; /*border color of the modal*/
+	text-align: center;
 }
 
-.display-block {
+
+.modalMain p{
+	color: #179038;
+	display: block;
+
+}
+
+.displayBlock {
 	display: block;
 }
 
-.display-none {
+.displayNone {
 	display: none;
 }
 
-.Close {
-	color: #aaa;
-	float: right;
-	font-size: 28px;
-	font-weight: bold;
+.close {
+	color: #D72828; /*this is the text color*/
+	float: bottom;
+	font-size: 20px;
+	font-weight: normal;
+
 }
 
-.Close:hover,
-.Close:focus {
+.close:hover,
+.close:focus {
 	color: black;
 	text-decoration: none;
 	cursor: pointer;
