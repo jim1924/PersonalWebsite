@@ -1,10 +1,10 @@
-import React, {Component} from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import Networks from './Networks';
 
 
 const Header =(props)=> {
-  const {name, occupation, jobDescription, headerStatement, employer, city}=props.data;
+  const {name, occupation, jobDescription, headerStatement, employer, address}=props.data;
   const networks = <Networks social={props.data.social}/>;
 
   return (
@@ -54,8 +54,9 @@ const Header =(props)=> {
       <div className="row banner">
         <div className="banner-text">
           <h1 className="responsive-headline">I'm {name}.</h1>
+          {console.log('this is address'+address)}
           <h3>
-              I'm a <span>{city}</span> based <span>{occupation}</span>{headerStatement}
+              I'm a <span>{address.city}</span> based <span>{occupation}</span>{headerStatement}
             <span>{employer}</span> as a<span> {jobDescription}</span>.
           </h3>
           <hr />

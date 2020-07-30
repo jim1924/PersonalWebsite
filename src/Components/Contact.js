@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
-import Modal from './UI/modal/modal';
+// import Modal from './UI/modal/modal';
+
 
 const Contact = (props) => {
   const {city, state, zip} = props.data.address;
@@ -152,10 +153,6 @@ const Contact = (props) => {
           </form>
           }
 
-
-          {/* <div id="message-warning"> Error boy</div>*/}
-
-
         </div>
 
         <aside className="four columns footer-widgets">
@@ -177,16 +174,15 @@ const Contact = (props) => {
         </aside>
       </div>
 
-      <Modal show={isModalShowing} handleClose={hideModal}>
-        <p>Modal</p>
-        <p>Data</p>
-      </Modal>
+
+      {/* <Modal show={isModalShowing} handleClose={hideModal}>*/}
+      {/*  <p>Your message has been sent successfully. Thank you!</p>*/}
+      {/* </Modal>*/}
+
 
       <button onClick={showModal}>
 			open
       </button>
-
-
     </section>
   );
 };
