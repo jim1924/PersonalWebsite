@@ -180,9 +180,9 @@ const Contact = (props) => {
       {/* </Modal>*/}
 
 
-      <button onClick={showModal}>
-			open
-      </button>
+      {/* <button onClick={showModal}>*/}
+      {/*	open*/}
+      {/* </button>*/}
     </section>
   );
 };

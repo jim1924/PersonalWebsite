@@ -54,9 +54,8 @@ const Header =(props)=> {
       <div className="row banner">
         <div className="banner-text">
           <h1 className="responsive-headline">I'm {name}.</h1>
-          {console.log('this is address'+address)}
           <h3>
-              I'm a <span>{address.city}</span> based <span>{occupation}</span>{headerStatement}
+              I'm a blablabla <span>{address.city}</span> based <span>{occupation}</span>{headerStatement}
             <span>{employer}</span> as a<span> {jobDescription}</span>.
           </h3>
           <hr />
