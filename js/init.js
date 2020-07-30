@@ -10,9 +10,8 @@ jQuery(document).ready(function($) {
 ------------------------------------------------------ */
 
   setTimeout(function() {
-	   $('h1.responsive-headline').fitText(1, {minFontSize: '40px', maxFontSize: '80px'});
+	   $('h1.responsive-headline').fitText(1, {minFontSize: '40px', maxFontSize: '70px'});
 	 }, 100);
-
 
   /* ----------------------------------------------------*/
   /* Smooth Scrolling
@@ -123,6 +122,46 @@ jQuery(document).ready(function($) {
     slideshowSpeed: 7000,
     animationSpeed: 600,
     randomize: false,
+  });
+
+  /* ----------------------------------------------------*/
+  /*	contact form
+------------------------------------------------------*/
+
+  $('form#contactForm button.submit').click(function() {
+    $('#image-loader').fadeIn();
+
+    const contactName = $('#contactForm #contactName').val();
+    const contactEmail = $('#contactForm #contactEmail').val();
+    const contactSubject = $('#contactForm #contactSubject').val();
+    const contactMessage = $('#contactForm #contactMessage').val();
+
+    const data = 'contactName=' + contactName + '&contactEmail=' + contactEmail +
+               '&contactSubject=' + contactSubject + '&contactMessage=' + contactMessage;
+
+    $.ajax({
+
+	      type: 'POST',
+	      url: 'inc/sendEmail.php',
+	      data: data,
+	      success: function(msg) {
+        // Message was sent
+        if (msg == 'OK') {
+          $('#image-loader').fadeOut();
+          $('#message-warning').hide();
+          $('#contactForm').fadeOut();
+          $('#message-success').fadeIn();
+        }
+        // There was an error
+        else {
+          $('#image-loader').fadeOut();
+          $('#message-warning').html(msg);
+	            $('#message-warning').fadeIn();
+        }
+	      },
+
+    });
+    return false;
   });
 });
 
